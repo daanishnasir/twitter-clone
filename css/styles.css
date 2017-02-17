@@ -260,3 +260,10 @@ body {
 			}
 
 
+.over{
+	color: red !important;
+}
+
+button{
+	display: disabled;
+}
