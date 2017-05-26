@@ -31,6 +31,8 @@ $('.tweet-compose').keyup(function(){
     var count = $('#char-count');
     var characters = $(this).val().length; //.length of the characters inside an input
 
+    //STEP 3: As the user types the character count should decrease. Once it hits 10 character or less the count should turn red -->
+
       count.text(maxCharacters - characters);
 
      if(characters >= 130){
@@ -83,6 +85,7 @@ $('#tweet-submit').click(function(){
 
 // $( selector ).mouseenter( handlerIn ).mouseleave( handlerOut );
 
+//STEP 6: The tweet actions below should only show up when you hover over the tweet. Otherwise, they should be hidden. -->
 
 
 $('#stream').on('mouseenter', '.content', function(){
@@ -93,6 +96,8 @@ $('#stream').on('mouseleave', '.content', function(){
   $(this).find('.tweet-actions').hide();
 });
 
+
+//STEP 7: The Retweets/timestamp/Reply areas below should also be hidden by default. These should only expand if you click on the tweet. Use a jQuery animation to accomplish the reveal, similar to how it’s done on Twitter.com -->
 
 $('#stream').on('click','.content', function(){
   $(this).find('.stats').fadeIn('slow');
