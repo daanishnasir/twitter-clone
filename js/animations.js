@@ -2,19 +2,27 @@
 
 $(document).ready(function(){
 
+  // STEP 1: Initially, the Tweet button and the character count button below should be hidden. -->
+
 $('#tweet-submit, #char-count').hide();
 $('.tweet-actions').hide();
 $('.stats').hide();
 
 
+//STEP 2: When the user clicks on the textarea, the textarea should double in size and the character count and Tweet buttons should be revealed.
 
 $(".tweet-compose").click(function(){
-  console.log("Tweet composed clicked");
+  // console.log("Tweet composed clicked");
+
     $(this).css('height', '10em');
     $('#tweet-submit, #char-count').show();
 });
 
 /////////
+
+
+//STEP 4: If the user puts in more than 140 characters, the tweet button should be disabled (and re-enabled when there are <= 140 chars) -->
+
 var maxCharacters = 140;
 
 $('#char-count').text(maxCharacters);
@@ -89,12 +97,6 @@ $('#stream').on('mouseleave', '.content', function(){
 $('#stream').on('click','.content', function(){
   $(this).find('.stats').fadeIn('slow');
 });
-
-
-
-
-
-
 
 
 
